@@ -45,12 +45,12 @@ class MovieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Movie $movie)
     {
-        //
+        return view('admin.movies.show', compact('movie'));
     }
 
     /**
