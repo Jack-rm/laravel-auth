@@ -17,11 +17,11 @@
                 @forelse ($movies as $movie)
 
                     <tr>
-                        <td> <a href="{{ route('admin.movies.show', $movie->id)}} "> {{$movie->title}} </a></th>
-                        <td>{{$movie->original_title}}</td>
-                        <td>{{$movie->nationality}} $</td>
-                        <td>{{$movie->date}}</td>
-                        <td>{{$movie->vote}}</td>
+                        <td> <a href="{{ route('admin.movies.show', $movie->id) }} "> {{$movie->title}} </a></th>
+                        <td>{{ $movie->original_title }}</td>
+                        <td>{{ $movie->nationality }} </td>
+                        <td>{{ $movie->getFormattedDate('date') }}</td>
+                        <td>{{ $movie->vote }}</td>
                     </tr>
 
                 @empty
